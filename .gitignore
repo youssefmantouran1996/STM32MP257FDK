@@ -1,15 +1,3 @@
-# Exclude build artifacts
+# Build files
 *.o
-*.out
-*.egg-info/
-
-# Exclude temporary files
-build/
-tmp/
-sstate-cache/
-downloads/
-
-# Exclude editor files
-*~
-*.swp
-.DS_Store
+*.bin
