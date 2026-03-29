@@ -1,3 +1,26 @@
-# Yocto kas configuration
+# Yocto kas configuration for STM32MP257FDK
 
-# Defines the layers for the STM32MP257F system
+header:
+  version: 13
+
+machine: stm32mp257f-dk
+
+distro: stm32mp
+
+layers:
+  meta-st-stm32mp:
+    path: layers/meta-st-stm32mp
+  meta-openembedded/meta-oe:
+    path: layers/meta-openembedded/meta-oe
+  meta-openembedded/meta-python:
+    path: layers/meta-openembedded/meta-python
+  poky/meta:
+    path: layers/poky/meta
+  poky/meta-poky:
+    path: layers/poky/meta-poky
+  poky/meta-yocto-bsp:
+    path: layers/poky/meta-yocto-bsp
+
+targets:
+  - stm32mp2-image-core
+  - stm32mp2-image-weston
